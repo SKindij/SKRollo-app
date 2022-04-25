@@ -1,2 +1,3 @@
 # soft-calc-shutters-gates
-calculating  sets for shutters and gates
+software for calculating the types and number of complete sets 
+for protective shutters and sectional gates
