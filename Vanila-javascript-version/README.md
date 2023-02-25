@@ -40,29 +40,25 @@ Vanila-javascript version
 > > module.exports = { // this will be our options object
 > > 	context: path.resolve(__dirname, 'resources'), // folder where source files of project are located and will be linked to it
 > > 	mode: 'development',
-> > 	
 > > 	entry: {
 > > 		main: './SKRollo.js', // no matter how many modules application contains, there is always a single entry point;
 > > 	}, 
 > > 	output: {
 > > 		path: path.resolve(__dirname, 'SKRapp'), // we want to put everything in SKRapp folder
 > > 		filename: '[name].[contenthash].bundle.js' // name configured file using patterns
-> > 	},
-> > 	
+> > 	}, 	
 > > 	resolve: {
 > > 		extensions: ['.js', '.json', '.png'], // so that in imports, file extensions are not written, but only their names
 > > 		alias: {   // create lightweight paths to folders with files;
 > > 			'@models': path.resolve(__dirname, 'resources/models'),
 > > 			'@': path.resolve(__dirname, 'resources')
 > > 		}	
-> >    },
-> > 	
+> >    },	
 > > 	optimization: {
 > > 	    splitChunks: {
 > >           chunks: 'all'		
 > > 	    }	
 > > 	},
-> > 
 > > 	module: {  // to tell webpack about transformations that need to be done before generating bundle;  
 > >         rules: [  // these are our loaders;
 > >             {
@@ -79,7 +75,6 @@ Vanila-javascript version
 > >              }
 > >       ]
 > >    },
-> > 
 > > 	plugins: [   // allow to perform tasks after collecting the bundle                        
 > >         new HtmlWebpackPlugin({ // to generate an html file based on our base html
 > > 			template: './index.html'
