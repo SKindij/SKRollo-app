@@ -24,7 +24,35 @@
         <label for="openingHeight"> <b>opening height:</b></label>
           <input class="input-form" type='number' id="openingHeight" placeholder="мм" step="10" min="400" max="5000">
     </div>
-    
+<div class="app-block">
+        <p><b>Profile type:</b></p>
+        <select id='profileType' class="app-select">
+          <option value="" disabled="disabled" selected="selected">..select..</option>
+          <optgroup label="window-door series">
+            <option value="RP39n">RP39n-foam</option>
+            <option value="RP45s">RP45s-extrusion</option>
+            <option value="RP55n">RP55n-foam</option>
+          </optgroup>
+          <optgroup label="garage series">
+            <option value="RP55s" disabled="disabled">RP55s-extrusion</option>
+            <option value="RP77n">RP77n-foam</option>
+          </optgroup>
+        </select>
+    </div>
+    <div class="app-block">
+        <p><b>Opening type:</b></p>
+        <select id='controlType' class="app-select">
+          <option value="" disabled="disabled" selected="selected">..select..</option>
+          <optgroup label="manual">
+            <option value="sim">inertial spring</option>
+            <option disabled="disabled" value="cord">cord stacker</option>
+          </optgroup>
+          <optgroup label="automatic">
+            <option disabled="disabled" value="motor">el/motor</option>
+            <option disabled="disabled" value="motorNHK">el/motor NHK</option>
+          </optgroup>
+        </select>
+    </div>    
     
     
     
