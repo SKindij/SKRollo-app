@@ -24,7 +24,7 @@
         <label for="openingHeight"> <b>opening height:</b></label>
           <input class="input-form" type='number' id="openingHeight" placeholder="мм" step="10" min="400" max="5000">
     </div>
-<div class="app-block">
+    <div class="app-block">
         <p><b>Profile type:</b></p>
         <select id='profileType' class="app-select">
           <option value="" disabled="disabled" selected="selected">..select..</option>
@@ -62,14 +62,74 @@
           <option value="plusGuides" disabled="disabled">plus guides</option>
           <option value="onHole" disabled="disabled">on the opening (on the overlay)</option>
       </select>
+    </div>
+      <div class="app-block">
+       <button id="beginCalc" class="app-block-btn">Begin <br> calculation</button>
+      </div>
+    </div>
+</section>    
+    
+<!-- selection of additional parameters -->
+<section class="app-section" id="Section2">
+    <h3>Add a color, choose a closure and continue.</h3>
+    <div class="flex-block">
+      <div class="app-block">
+        <p><b>Color of shutter:</b></p>
+        <select id='roletColor' class="app-select">
+          <option value="" disabled="disabled" selected="selected">..select..</option>
+            <option value="white-W16">white</option>
+            <option value="brown-Y06">brown</option>
+            <option value="silver-V16">silver</option>
+            <option value="anthracite-M14">anthracite</option>
+        </select>
+    </div>
+    <div class="app-block">
+      <p><b>Canvas hangers:</b></p>
+      <select id='hangers' class="app-select">
+        <option value="" disabled="disabled" selected="selected">....</option>
+          <option value="springs">traction springs</option>
+          <option disabled="disabled" value="blockades">block bars</option>
+      </select>
   </div>
     <div class="app-block">
-     <button id="beginCalc" class="app-block-btn">Begin <br> calculation</button>
+      <p><b>Pipe shaft:</b></p>
+      <select id='tubeType' class="app-select">
+          <option value="" disabled="disabled" selected="selected">....</option>
+          <option value="RT40">40th</option>
+          <option value="RT60">60th</option>
+          <option value="RT70">70th</option>
+          <option value="RT102">102th</option>
+      </select>
+  </div>
+  <div class="app-block">
+    <p><b>Protective box:</b></p>
+    <select id='boxType' class="app-select">
+      <option value="" disabled="disabled" selected="selected">....</option>
+        <option value="Box150">150th</option>
+        <option value="Box165">165th</option>
+        <option value="Box180">180th</option>
+        <option value="Box205">205th</option>
+        <option value="Box250">250th</option>
+        <option value="Box300">300th</option>
+        <option value="Box350">350th</option>
+        <option value="Box375">375th</option>
+    </select>
+</div>
+<div class="app-block">
+  <p><b>Locking:</b></p>
+  <select id='lockingType' class="app-select">
+    <option value="" disabled="disabled" selected="selected">..select..</option>
+      <option value="without">without</option>
+      <option value="keyLock">key lock</option>
+      <option value="latch">latch (spingalet)</option>
+      <option disabled="disabled" value="comb">comb</option>
+  </select>
+</div>
+    <div class="app-block">
+     <button id="continueCalc" class="app-block-btn">Continue <br> calculation</button>
   </div>
   </div>
 </section>    
-    
-    
     
     
     
