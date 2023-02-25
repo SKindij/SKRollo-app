@@ -131,7 +131,39 @@
   </div>
 </section>    
     
-    
+<!-- Calculation of the basic settings of the roller shutter. -->
+<section class="app-section" id="Section3">
+    <h3>Enter the calculation number and create a specification.</h3>
+    <div class="flex-block">
+      <div class="app-block">
+			<div id="rollerDimensions">
+              <p><b>roller width:</b> <span id="rolloWidth"></span> mm</p>
+              <p><b>roller height:</b> <span id="rolloHeight"></span> mm</p>
+            </div>
+      </div>
+      <div class="app-block">
+        <p><b>Guide rails:</b></p>
+        <select id='guideRails' class="app-select">
+          <option value="" disabled="disabled" selected="selected">...</option>
+            <option disabled="disabled" value="GR53s">53-rd</option>
+            <option disabled="disabled" value="GR62mb">62-rd</option>
+            <option disabled="disabled" value="GR70m">70-rd</option>
+            <option disabled="disabled" value="GR77b">77-rd</option>
+            <option disabled="disabled" value="GR90b">90-rd</option>
+        </select>
+      </div>
+       <div class="app-block">
+        <label for="orderNumber"> <b>order no:</b></label>
+          <input class="input-form" type='text' id="orderNumber" placeholder="№ BO"><br>
+       </div>
+       <div class="app-block">
+        <button id="finishCalc" class="app-block-btn">Output <br> calculation</button>
+     </div>
+       <div class="app-block">
+         <button id="downloadCalc" class="app-block-btn">Download <br> specification</button>
+      </div>
+  </div>
+</section>    
     
     
     
