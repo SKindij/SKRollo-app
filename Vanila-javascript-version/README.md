@@ -6,6 +6,7 @@ Vanila-javascript version
   + index.html
   + SKRollo.css
   + SKRollo.js
+  
 * package.json
 > The main task of webpack is to generate a bundle that can be referenced in index.html.
 > > ```javascript
@@ -29,9 +30,72 @@ Vanila-javascript version
 > >  }
 > > ```
 
-
-
 * webpack.config.js
+> Since it is not convenient to write commands and specify their arguments in the console, a configuration file is created for WebPack
+> > ```javascript
+> > const path = require ('path');
+> > const HtmlWebpackPlugin = require('html-webpack-plugin');
+> > const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+> > const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+> > 
+> > module.exports = {
+> > 	context: path.resolve(__dirname, 'resources'),
+> > 	mode: 'development',
+> > 	
+> > 	entry: {
+> > 		main: './SKRollo.js',
+> > 	}, 
+> > 	output: {
+> > 		path: path.resolve(__dirname, 'SKRapp'),
+> > 		filename: '[name].[contenthash].bundle.js'
+> > 	},
+> > 	
+> > 	resolve: {
+> > 		extensions: ['.js', '.json', '.png'],
+> > 		alias: {
+> > 			'@models': path.resolve(__dirname, 'resources/models'),
+> > 			'@': path.resolve(__dirname, 'resources')
+> > 		}	
+> >     },
+> > 	
+> > 	optimization: {
+> > 	    splitChunks: {
+> >           chunks: 'all'		
+> > 	    }	
+> > 	},
+> > 
+> > 	module: {    
+> >         rules: [      
+> >             {
+> >               test: /\.css$/,
+> >               use: [MiniCssExtractPlugin.loader, 'css-loader']
+> >              },
+> > 			 {
+> >                test: /\.(png|jpg|jpeg|svg|gif)$/,
+> >                type: 'asset/resource',
+> >              },
+> > 			 {
+> >               test: /\.(ttf|woff|eot|woff2)$/,
+> >               type: 'asset/resource'
+> >              }
+> >       ]
+> >    },
+> > 
+> > 	plugins: [                           
+> >         new HtmlWebpackPlugin({
+> > 			template: './index.html'
+> > 		}),
+> >         new CleanWebpackPlugin(),
+> > 		new MiniCssExtractPlugin()
+> >     ] 
+> > };
+> > ```
+
+
+
+
+
+
 ___
 
 Using Webpack, we compile the project into the **SKRapp** folder.
