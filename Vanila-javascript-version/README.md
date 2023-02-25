@@ -85,10 +85,21 @@ Vanila-javascript version
 > > };
 > > ```
 
+* package-lock.json
 ___
+If the project has a **package.json** file, then by running:<br>
+     ``npm install``<br>
+will install everything the project needs into the **node_modules** folder, creating it if it doesn't already exist.
+
+
+
+
+
 
 Using Webpack, we compile the project into the **SKRapp** folder.
-
+* ``npm run build``
+  + ``npm run dev``
+  + ``npm run prod``
 
 
 
