@@ -504,11 +504,75 @@ const PosArticles = document.querySelector("#PosArticles");
   let stopperQuant = PosQuanty.querySelector("#stopperQuant"); // 10
   let plugsQuant = PosQuanty.querySelector("#plugsQuant"); // 11
 
+let specificationObject = {};
 
+function addСanvasLength() { 
+  switch (profileType.value) {
+    case "RP39n": //TODO: describe calculating the dimensions for this Profile
+      octaShaftLength.textContent = Number(rolloWidth.textContent) - 50;
+      profileLength.textContent = Number(rolloWidth.textContent) - 72;
+      connectLength.textContent = Number(rolloWidth.textContent) - 72;
+      endBarLength.textContent = Number(rolloWidth.textContent) - 72;
+      laneLength.textContent = (Number(rolloWidth.textContent) - 72) / 2;
+      lowRubberLength.textContent = Number(rolloWidth.textContent) - 72;
+    break;
+    case "RP45s": //TODO: describe calculating the dimensions for this Profile
+      octaShaftLength.textContent = Number(rolloWidth.textContent) - 50;
+      profileLength.textContent = Number(rolloWidth.textContent) - 72;
+      connectLength.textContent = Number(rolloWidth.textContent) - 72;
+      endBarLength.textContent = Number(rolloWidth.textContent) - 72;
+      laneLength.textContent = (Number(rolloWidth.textContent) - 72) / 2;
+      lowRubberLength.textContent = Number(rolloWidth.textContent) - 72;
+    break;
+    case "RP55n": //TODO: describe calculating the dimensions for this Profile
+      octaShaftLength.textContent = Number(rolloWidth.textContent) - 60;
+      profileLength.textContent = Number(rolloWidth.textContent) - 88;
+      connectLength.textContent = Number(rolloWidth.textContent) - 88;
+      endBarLength.textContent = Number(rolloWidth.textContent) - 88;
+      laneLength.textContent = (Number(rolloWidth.textContent) - 88) / 2;
+      lowRubberLength.textContent = Number(rolloWidth.textContent) - 88;
+    break;
+    case "RP55s": //TODO: describe calculating the dimensions for this Profile
+      octaShaftLength.textContent = Number(rolloWidth.textContent) - 60;
+      profileLength.textContent = Number(rolloWidth.textContent) - 88;
+      connectLength.textContent = Number(rolloWidth.textContent) - 88;
+      endBarLength.textContent = Number(rolloWidth.textContent) - 88;
+      laneLength.textContent = (Number(rolloWidth.textContent) - 88) / 2;
+      lowRubberLength.textContent = Number(rolloWidth.textContent) - 88;
+    break;
+    case "RP77n": //TODO: describe calculating the dimensions for this Profile
+      octaShaftLength.textContent = Number(rolloWidth.textContent) - 80;
+      profileLength.textContent = Number(rolloWidth.textContent) - 102;
+      connectLength.textContent = Number(rolloWidth.textContent) - 102;
+      endBarLength.textContent = Number(rolloWidth.textContent) - 102;
+      laneLength.textContent = (Number(rolloWidth.textContent) - 102) / 2;
+      lowRubberLength.textContent = Number(rolloWidth.textContent) - 102;
+    break;
+  }
+}
 
-
-
-
+function addBoxAndRailsLength() { //TODO: describe calculating the dimensions for each type of Box
+  switch (boxType.value) {
+    case "Box150":
+    case "Box165":
+    case "Box180":
+      protBoxLength.textContent = Number(rolloWidth.textContent) - 8;
+    break;
+    case "Box205":
+      protBoxLength.textContent = Number(rolloWidth.textContent) - 10;
+    break;
+    case "Box250":
+    case "Box300":
+      protBoxLength.textContent = Number(rolloWidth.textContent) - 10;
+    break;
+    case "Box350":
+    case "Box375":
+      protBoxLength.textContent = Number(rolloWidth.textContent) - 12;
+    break;
+  }
+  guideRailsLength.textContent = Number(rolloHeight.textContent) - Number.parseInt(boxType.value.replace(/[^\d]/g, '')) + 20;
+  brushInsertLength.textContent = Number(rolloHeight.textContent) - Number.parseInt(boxType.value.replace(/[^\d]/g, ''));
+}
 
 
 
