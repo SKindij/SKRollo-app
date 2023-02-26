@@ -210,7 +210,7 @@ function setRailsType() {
           break;
           case "RP77n" :
             guideRails.value = "GR90b";
-            brushInsertArt.textContent = 'under development
+            brushInsertArt.textContent = 'under development'
         }
 }
 
