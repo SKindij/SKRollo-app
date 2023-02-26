@@ -267,7 +267,34 @@ function setRolletsDimensions() {
   console.log('overall dimensions of roller shutter', Number(rolloWidth.textContent), 'x', Number(rolloHeight.textContent));
 }
 
-
+function setSideCoverType() {
+  switch (boxType.value) {
+    case "Box150":
+      sideCoversArt.textContent = 'BSC150' + roletColor.value;
+      break;
+    case "Box165":
+      sideCoversArt.textContent = 'BSC165' + roletColor.value;
+      break;
+    case "Box180":
+      sideCoversArt.textContent = 'BSC180' + roletColor.value;
+      break;
+    case "Box205":
+      sideCoversArt.textContent = 'BSC205' + roletColor.value;
+      break;
+    case "Box250":
+      sideCoversArt.textContent = 'BSC250' + roletColor.value;
+      break;
+    case "Box300":
+      sideCoversArt.textContent = 'BSC300' + roletColor.value;
+      break;
+    case "Box350":
+      sideCoversArt.textContent = 'BSC350' + roletColor.value;
+      break;
+    case "Box375":
+      sideCoversArt.textContent = 'BSC375' + roletColor.value;
+      break;
+  }
+}
 
 
 
