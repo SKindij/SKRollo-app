@@ -362,7 +362,52 @@ console.log(`weight of canvas: ${canvasWeight} кг`)
 return canvasWeight;
 }
 
+function setSmallDetails() {
+  switch (tubeType.value) {
+    case "RT40":
+      capsuleArt.textContent = 'KUP40';
+      bearingArt.textContent = 'BM28';
+      bearBracketArt.textContent = 'none';
+//*TODO: SIM
+/*
+      if (canvasWeight) {
+        
+      } else {
+        
+      }
+*/
+    break;
+    case "RT60": //*? how to choose different types of capsules?
+      capsuleArt.textContent = 'KUP60';
+      bearingArt.textContent = 'BM28';
+    break;
+    case "RT70": //*? how to choose different types of capsules?
+      capsuleArt.textContent = 'KBM70';
+      bearingArt.textContent = 'BM42';
+    break;
+    case "RT102": 
+      capsuleArt.textContent = 'KBM102';
+      bearingArt.textContent = 'BM42';
+    break;
+  }
 
+  switch (lockingType.value) {
+    case "keyLock":
+      boltLockArt.textContent = 'BL';
+    break;
+    case "latch":
+      boltLockArt.textContent = 'SL';
+    break;
+    case "comb":
+      boltLockArt.textContent = 'CB';
+    break;
+    default:
+      boltLockArt.textContent = 'none';
+    break;
+}
+  stopperArt.textContent = 'ST' + roletColor.value;
+  plugsArt.textContent = 'PP12 or PP14' + roletColor.value;
+} 
 
 
 
