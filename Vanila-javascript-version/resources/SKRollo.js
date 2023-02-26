@@ -191,6 +191,37 @@ function setHangersTypeAndArticles() {
   }
 }
 
+function setRailsType() {
+        switch (profileType.value) {
+          case "RP39n" :
+          case "RP45s" :
+            guideRails.value = "GR53s";
+            brushInsertArt.textContent = 'under development';
+          break;
+          case "RP55n" :
+          case "RP55s" :
+            if (boxType.value === "Box250" || boxType.value === "Box300") {
+              guideRails.value = "GR77b";
+              brushInsertArt.textContent = 'under development';
+            } else {
+              guideRails.value = "GR70m";
+              brushInsertArt.textContent = 'under development';
+            }
+          break;
+          case "RP77n" :
+            guideRails.value = "GR90b";
+            brushInsertArt.textContent = 'under development
+        }
+}
+
+
+
+
+
+
+
+
+
 
 
 
