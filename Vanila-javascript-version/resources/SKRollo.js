@@ -244,7 +244,28 @@ function beginCalculation() {
 }
 beginCalc.addEventListener('click', beginCalculation);
 
-
+//* continuation of calculation taking into account additional parameters
+function setRolletsDimensions() {
+  switch (instalType.value) {
+    case "inHole":
+      rolloWidth.textContent = openingWidth.value;
+      rolloHeight.textContent = openingHeight.value;
+      break;
+    case "plusBox":
+      rolloWidth.textContent = openingWidth.value;
+      rolloHeight.textContent = openingHeight.value;
+      break;
+    case "plusGuides":
+      rolloWidth.textContent = openingWidth.value;
+      rolloHeight.textContent = openingHeight.value;
+      break;
+      case "onHole":
+        rolloWidth.textContent = openingWidth.value;
+        rolloHeight.textContent = openingHeight.value;
+        break;
+  }
+  console.log('overall dimensions of roller shutter', Number(rolloWidth.textContent), 'x', Number(rolloHeight.textContent));
+}
 
 
 
