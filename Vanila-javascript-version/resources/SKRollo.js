@@ -296,7 +296,45 @@ function setSideCoverType() {
   }
 }
 
-
+function setEndBarType() {
+  switch (profileType.value) {
+    case "RP39n":
+    case "RP45s":
+      if (lockingType.value === 'keyLock' || lockingType.value === 'latch') {
+        connectArt.textContent = 'connector';
+        endBarArt.textContent = 'bar under the lock';
+        lowRubberArt.textContent = 'lower rubber band';
+        laneArt.textContent = 'closed lane';
+      } else {
+        endBarArt.textContent = 'solid bar';
+        lowRubberArt.textContent = 'lower rubber band';
+      }
+      break;
+    case "RP55n":
+    case "RP55s":
+      if (lockingType.value === 'keyLock' || lockingType.value === 'latch') {
+        connectArt.textContent = 'connector';
+        endBarArt.textContent = 'bar under the lock';
+        lowRubberArt.textContent = 'lower rubber band';
+        laneArt.textContent = 'closed lane';
+      } else {
+        endBarArt.textContent = 'solid bar';
+        lowRubberArt.textContent = 'lower rubber band';
+      }
+        break;
+    case "RP77n":
+      if (lockingType.value === 'keyLock' || lockingType.value === 'latch') {
+        connectArt.textContent = 'connector';
+        endBarArt.textContent = 'bar under the lock';
+        lowRubberArt.textContent = 'lower rubber band';
+        laneArt.textContent = 'closed lane';
+      } else {
+        endBarArt.textContent = 'solid bar';
+        lowRubberArt.textContent = 'lower rubber band';
+      }
+      break;
+  }
+}
 
 
 
