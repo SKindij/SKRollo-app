@@ -13,5 +13,6 @@
 
 &emsp;In the future, this program will be able to be used by manufacturing enterprises and their engineering departments.
 
+### MIT Licence
 
-
+Copyright (c) 2023 SKindij
