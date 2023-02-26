@@ -684,4 +684,4 @@ downloadCalc.addEventListener('click', downloadSpecification);
 const reloadPage = document.querySelector("#reloadPage");
 reloadPage.addEventListener('click', () => { document.location.reload(); });
 
-\
+// ...
