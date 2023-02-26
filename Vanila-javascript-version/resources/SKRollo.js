@@ -336,7 +336,31 @@ function setEndBarType() {
   }
 }
 
-
+let canvasWeight = 0;
+const RP39nWeigt = 2;
+const RP45sWeigt = 4; //*? check the information
+const RP55nWeigt = 2.3;
+const RP55sWeigt = 10.3;
+const RP77nWeigt = 4.5;
+function calculateCanvasWeight() {
+  switch (profileType.value) {
+    case "RP39n" :
+      canvasWeight = Number(rolloWidth.textContent)/1000 * Number(rolloHeight.textContent)/1000 * RP39nWeigt;
+      break;
+    case "RP45s" :
+      canvasWeight = Number(rolloWidth.textContent) * Number(rolloHeight.textContent) * RP45sWeigt;
+    case "RP55n" :
+      canvasWeight = Number(rolloWidth.textContent) * Number(rolloHeight.textContent) * RP55nWeigt;
+      break;
+    case "RP55s" :
+      canvasWeight = Number(rolloWidth.textContent) * Number(rolloHeight.textContent) * RP55sWeigt;
+    case "RP77n" :
+      canvasWeight = Number(rolloWidth.textContent) * Number(rolloHeight.textContent) * RP77nWeigt;
+      break;
+  }
+console.log(`weight of canvas: ${canvasWeight} кг`)
+return canvasWeight;
+}
 
 
 
