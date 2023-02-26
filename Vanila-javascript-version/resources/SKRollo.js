@@ -31,7 +31,78 @@ Section3.style.visibility = "hidden";
 downloadCalc.style.visibility = "hidden";
 Section4.style.visibility = "hidden";
 
-
+//* beginning of configuration based on initial parameters
+function setBoxType() {
+  switch (profileType.value) {
+    case "RP39n" : //TODO: here you need to enter the correct parameters
+      if (openingHeight.value <= 1200) {  
+        boxType.value = "Box150";
+      } else if (openingHeight.value <= 1800) {
+        boxType.value = "Box165";
+      } else if (openingHeight.value <= 2000) {
+        boxType.value = "Box180";
+      } else if (openingHeight.value <= 2300) {
+        boxType.value = "Box205";
+      } else {
+        alert ('too high for the spring');
+        boxType.value = "";
+      }
+      break;
+    case "RP45s" : //TODO: here you need to enter the correct parameters
+      if (openingHeight.value <= 1200) {  
+        boxType.value = "Box150";
+      } else if (openingHeight.value <= 1800) {
+        boxType.value = "Box165";
+      } else if (openingHeight.value <= 2000) {
+        boxType.value = "Box180";
+      } else if (openingHeight.value <= 2300) {
+        boxType.value = "Box205";
+      } else {
+        alert ('too high for the spring');
+      }
+      break;
+    case "RP55n" : //TODO: here you need to enter the correct parameters
+      if (openingHeight.value <= 1200) {  
+        boxType.value = "Box150";
+      } else if (openingHeight.value <= 1800) {
+        boxType.value = "Box165";
+      } else if (openingHeight.value <= 2000) {
+        boxType.value = "Box180";
+      } else if (openingHeight.value <= 2300) {
+        boxType.value = "Box205";
+      } else if (openingHeight.value <= 2800) {
+        boxType.value = "Box250";
+      } else if (openingHeight.value <= 3100) {
+        boxType.value = "Box300";
+      } else {
+        alert ('too high for the spring');
+      }			
+      break;
+    case "RP55s" :
+      alert ('it is better to choose another profile');
+      break;
+    case "RP77n" : //TODO: here you need to enter the correct parameters
+      if (openingHeight.value <= 2400) {  
+        boxType.value = "Box250";
+      } else if (openingHeight.value <= 2800) {
+        boxType.value = "Box300";
+      } else if (openingHeight.value <= 3300) {
+        boxType.value = "Box350";
+      } else if (openingHeight.value <= 3400) {
+        boxType.value = "Box375";
+      } else {
+        alert ('too high for the spring');
+      }
+      break;
+      case "cord": // for future software versions
+        console.log ('selection of the box for the cord');
+        break;
+      case "motor": // for future software versions
+      case "motorNHK":
+        console.log ('selection of the box for the motor');
+        break;
+    }
+}
 
 
 
