@@ -104,7 +104,63 @@ function setBoxType() {
     }
 }
 
-
+function setTubeType() {
+  switch (controlType.value) {
+    case "sim":   
+        switch (profileType.value) {
+          case "RP39n" : //TODO: here you need to enter the correct parameters
+            if (openingWidth.value <= 1900) {	  
+              tubeType.value = "RT40";
+            } else if (openingWidth.value <= 2700) {
+              tubeType.value = "RT60";
+            } else {
+              alert ('width too large for 39n profile');
+              tubeType.value = "";
+            }
+          break;
+          case "RP45s" : //TODO: here you need to enter the correct parameters
+            if (openingWidth.value <= 1400) {	  
+              tubeType.value = "RT40";
+            } else if (openingWidth.value <= 2100) {
+              tubeType.value = "RT60";
+            } else if (openingWidth.value <= 2600) {
+			        tubeType.value = "RT70";
+            } else {
+              alert ('width too large for 45s profile');
+            }
+          break;
+          case "RP55n" : //TODO: here you need to enter the correct parameters
+            if (openingWidth.value <= 2600) {
+              tubeType.value = "RT60";
+            } else if (openingWidth.value <= 3300) {
+              tubeType.value = "RT70";
+            } else {
+              alert ('width too large for 55n profile');
+            }
+          break;
+          case "RP55s" :
+            alert ('краще вибрати інший профіль');
+          break;
+          case "RP77n" : //TODO: here you need to enter the correct parameters
+            if (openingWidth.value <= 2600) {
+              tubeType.value = "RT60";
+            } else if (openingWidth.value <= 3600) {
+			        tubeType.value = "RT70";
+            } else {
+              alert ('width too large for 77n profile');
+            }
+          break;
+        }
+    break;
+    case "cord": // for future software versions
+      console.log ('selection of the shaft for the cord');
+      break;
+    case "motor": // for future software versions
+    case "motorNHK":
+      console.log ('selection of the shaft for the motor');
+    break;
+  }
+}
 
 
 
