@@ -574,7 +574,31 @@ function addBoxAndRailsLength() { //TODO: describe calculating the dimensions fo
   brushInsertLength.textContent = Number(rolloHeight.textContent) - Number.parseInt(boxType.value.replace(/[^\d]/g, ''));
 }
 
+function addMeasPosQuantity() {
+	protBoxQuant.textContent = 1;
+	octaShaftQuant.textContent = 1;
+  profileQuant.textContent = Math.ceil((Number(rolloHeight.textContent) - Number.parseInt(boxType.value.replace(/[^\d]/g, '')) / 2) / Number.parseInt(profileType.value.replace(/[^\d]/g, '')));
+  connectQuant.textContent = 1;
+  endBarQuant.textContent = 1;
+  laneQuant.textContent = 2;
+  lowRubberQuant.textContent = 1;
+  guideRailsQuant.textContent = 2;
+	brushInsertQuant.textContent = 4;
+}
 
+function addPosQuantity() {
+  sideCoverQuant.textContent = 1;
+  ringsShafQuant.textContent = Math.ceil(Number(rolloWidth.textContent) / 400);
+  hangersQuant.textContent = Math.ceil(Number(rolloWidth.textContent) / 400);
+  capsuleQuant.textContent = 1;
+  bearingQuant.textContent = 1;
+  bearBracketQuant.textContent = 'under development'; //*? must be function
+  springQuant.textContent = 1;
+  plateQuant.textContent = 1;
+  boltLockQuant.textContent = 1;
+  stopperQuant.textContent = 2;
+  plugsQuant.textContent = Math.ceil((Number(rolloHeight.textContent) - Number.parseInt(boxType.value.replace(/[^\d]/g, ''))) / 400) * 2;
+}
 
 
 
