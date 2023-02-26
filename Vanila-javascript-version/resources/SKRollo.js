@@ -668,7 +668,20 @@ function createSpecificationObject() {
   return specificationObject;
 }
 
+//** FILE UPLOAD BUTTON
+function downloadSpecification(){
+  createSpecificationObject();
+  // First, we create a new large binary object - Blob. Basically it's a file.
+  let blob = new Blob([JSON.stringify(specificationObject, null, '\t')], {type: "application/json"});
+  // Then we create a new link object <a> and add attributes
+  let link = document.createElement("a");
+    link.setAttribute("href", URL.createObjectURL(blob));
+    link.setAttribute("download", orderNumber.value +"-SKR.json");
+    link.click();
+}
+downloadCalc.addEventListener('click', downloadSpecification);
 
+const reloadPage = document.querySelector("#reloadPage");
+reloadPage.addEventListener('click', () => { document.location.reload(); });
 
-
-
+\
