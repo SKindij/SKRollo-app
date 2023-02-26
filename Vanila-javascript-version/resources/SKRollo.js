@@ -162,7 +162,34 @@ function setTubeType() {
   }
 }
 
-
+function setHangersTypeAndArticles() {
+	let springsArticles = ['HS130', 'HS170', 'HS190'];
+  switch (controlType.value) {
+    case "sim":
+      hangers.value = 'springs';
+        switch (profileType.value) {
+		   case "RP39n" :
+	      hangersArt.textContent = springsArticles[0];
+		     break;
+	    case "RP45s" :
+		    case "RP55n" :
+	      hangersArt.textContent = springsArticles[1];
+	      break;
+	    case "RP55s" :
+	    case "RP77n" :
+	      hangersArt.textContent = springsArticles[2];
+		    break;
+		    }
+		break;
+    case "cord": // for future software versions
+      hangers.value = 'springs';
+      break;
+    case "motor": // for future software versions
+    case "motorNHK":
+      hangers.value = 'blockades';
+      break;
+  }
+}
 
 
 
