@@ -1,6 +1,4 @@
 //! * Authored by SKindij. * MIT Licence *
-//! This project is my personal idea and development, which I do as much as possible in my free time.
-//! I will be glad and grateful to everyone for advice on its improvement.
 import './SKRollo.css';
 
 //* initialization of parameters 
@@ -35,13 +33,13 @@ Section4.style.visibility = "hidden";
 function setBoxType() {
   switch (profileType.value) {
     case "RP39n" : //TODO: here you need to enter the correct parameters
-      if (openingHeight.value <= 1200) {  
+      if (openingHeight.value <= 1840) {  
         boxType.value = "Box150";
-      } else if (openingHeight.value <= 1800) {
+      } else if (openingHeight.value <= 2250) {
         boxType.value = "Box165";
-      } else if (openingHeight.value <= 2000) {
+      } else if (openingHeight.value <= 2785) {
         boxType.value = "Box180";
-      } else if (openingHeight.value <= 2300) {
+      } else if (openingHeight.value <= 3395) {
         boxType.value = "Box205";
       } else {
         alert ('too high for the spring');
@@ -49,30 +47,30 @@ function setBoxType() {
       }
       break;
     case "RP45s" : //TODO: here you need to enter the correct parameters
-      if (openingHeight.value <= 1200) {  
+      if (openingHeight.value <= 1840) {  
         boxType.value = "Box150";
-      } else if (openingHeight.value <= 1800) {
+      } else if (openingHeight.value <= 2250) {
         boxType.value = "Box165";
-      } else if (openingHeight.value <= 2000) {
+      } else if (openingHeight.value <= 2785) {
         boxType.value = "Box180";
-      } else if (openingHeight.value <= 2300) {
+      } else if (openingHeight.value <= 3395) {
         boxType.value = "Box205";
       } else {
         alert ('too high for the spring');
       }
       break;
     case "RP55n" : //TODO: here you need to enter the correct parameters
-      if (openingHeight.value <= 1200) {  
+      if (openingHeight.value <= 1000) {  
         boxType.value = "Box150";
-      } else if (openingHeight.value <= 1800) {
+      } else if (openingHeight.value <= 1385) {
         boxType.value = "Box165";
-      } else if (openingHeight.value <= 2000) {
+      } else if (openingHeight.value <= 1720) {
         boxType.value = "Box180";
-      } else if (openingHeight.value <= 2300) {
+      } else if (openingHeight.value <= 2345) {
         boxType.value = "Box205";
-      } else if (openingHeight.value <= 2800) {
+      } else if (openingHeight.value <= 3250) {
         boxType.value = "Box250";
-      } else if (openingHeight.value <= 3100) {
+      } else if (openingHeight.value <= 3400) {
         boxType.value = "Box300";
       } else {
         alert ('too high for the spring');
