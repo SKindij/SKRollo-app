@@ -1,8 +1,22 @@
 # SKRollo-app
 
-&emsp;Web application for calculating the list of materials for the production of protective shutters.
+## Web Application for Calculating Materials for Manufacturing Protective Shutters
 
-&emsp;According to the author's idea, the program interface consists of several logically connected blocks in which the user will enter his data. And the program will display the final result of calculations (_a list of materials with article numbers, their length and quantity_) on the screen, and will also provide an opportunity to save it in a separate file in JSON format.
+### Overview
+
+&emsp;SKRollo-app is a web-based application designed specifically for engineers working in manufacturing industries that produce external protective aluminum shutters.\
+&emsp;The primary purpose of this application is to streamline the process of generating a comprehensive list of materials required for the production of a specific shutter model.\
+&emsp;By inputting specific parameters and data, engineers can easily obtain a detailed list of components and materials needed to construct the desired protective shutter.
+
+### Key Features
+
++ Intuitive User Interface: The application features an intuitive user interface with logically connected blocks, making it user-friendly and efficient to use.
++ Input Data: Engineers will be prompted to enter essential data, such as the shutter's dimensions, design specifications, and other relevant criteria.
++ Accurate Calculations: Based on the input provided, the application performs precise calculations to determine the required quantity and specifications of materials needed.
++ Comprehensive Material List: The application generates a comprehensive list of components, including article numbers, lengths, and quantities, ensuring that no crucial materials are overlooked.
++ Export Functionality: Engineers can save the generated material list in JSON format, making it easy to share with production teams or suppliers.
+
+
 
 
 
