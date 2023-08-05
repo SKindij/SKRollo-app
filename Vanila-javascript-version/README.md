@@ -1,19 +1,16 @@
-# SKRollo-app
-Vanila-javascript version
+## SKRollo-app Project structure
 
-&emsp;**Project structure:**
-* resources
+* resources/
   + index.html
   + SKRollo.css
   + SKRollo.js
-  
+    
 * package.json
 > The main task of webpack is to generate a bundle that can be referenced in index.html.
 > > ```javascript
 > >  "scripts": {
 > >    "dev": "webpack --mode development",
 > >    "prod": "webpack --mode production",
-> >    "build": "webpack",
 > >    "watch": "webpack --watch"
 > >  },
 > >  "devDependencies": {
@@ -92,20 +89,7 @@ If the project has a **package.json** file, then by running:<br>
 will install everything the project needs into the **node_modules** folder, creating it if it doesn't already exist.
 
 
-
-
-
-
 Using Webpack, we compile the project into the **SKRapp** folder.
-* ``npm run build``
   + ``npm run dev``
   + ``npm run prod``
-
-
-
-
-
-
-
-
 
