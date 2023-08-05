@@ -47,7 +47,9 @@
 + **CSS:**
   - Cascading Style Sheets were utilized to design and style the application's user interface.
   - The application's appearance was carefully crafted to provide an intuitive and visually appealing experience for users.
-
++ **Webpack**
+  - It acts as a module bundler, enabling us to manage and optimize the application's assets efficiently. 
+  - Webpack seamlessly handles JavaScript and CSS files, transforming them into optimized bundles ready for deployment.
 
 ### Try It Out
 
