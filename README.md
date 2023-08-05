@@ -1,6 +1,6 @@
 # SKRollo-app
 
-## Web Application for Calculating Materials for Manufacturing Protective Shutters
+## Web App for Calculating Materials for Manufacturing Protective Shutters
 
 ### Overview
 
