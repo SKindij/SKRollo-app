@@ -34,6 +34,4 @@ function beginCalculation() {
     }
 }
 
-beginCalc.addEventListener('click', beginCalculation);
-
 export default beginCalculation;
