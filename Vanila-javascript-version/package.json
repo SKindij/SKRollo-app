@@ -1,6 +1,6 @@
 {
   "name": "sk-rollo",
-  "version": "0.1.3",
+  "version": "0.2.1",
   "description": "web-project for calculating the complete set of protective shutters",
   "private": true,
   "scripts": {
